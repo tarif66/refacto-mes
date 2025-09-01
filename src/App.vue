@@ -1,16 +1,16 @@
 <script setup lang="ts">
   import { RouterView } from 'vue-router'
+  import AppSidebar from './components/AppSidebar.vue';
+  import SidebarProvider from './components/ui/sidebar/SidebarProvider.vue';
 </script>
 
 <template>
-  <header class="bg-white h-40">header
-  </header>
-  <main class="bg-white h-40">
-    main
-    <RouterView />
-  </main>
-  <footer class="bg-white h-40">footer
-  </footer>
+  <SidebarProvider :defaultOpen="true">
+    <AppSidebar />
+    <main>
+      <RouterView />
+    </main>
+  </SidebarProvider>
 </template>
 
 <style scoped>
