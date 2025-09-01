@@ -6,9 +6,9 @@
 </script>
 
 <template>
-  <AppNavMenu class="w-screen"/>
+  <AppNavMenu class="w-full bg-yellow-500"/>
   <SidebarProvider :defaultOpen="true">
-    <AppSidebar class="top-10"  />
+    <AppSidebar class="top-14"  />
     <main class="w-screen">
       <RouterView />
     </main>
