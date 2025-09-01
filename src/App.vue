@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <header>
+  <header class="bg-white h-40">header
   </header>
-  <main>
+  <main class="bg-white h-40">
+    main
     <RouterView />
   </main>
-  <footer>
-    <Footer />
+  <footer class="bg-white h-40">footer
   </footer>
 </template>
 

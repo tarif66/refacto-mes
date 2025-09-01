@@ -2,7 +2,8 @@
 </script>
 
 <template>  
-  <div>
-    Hello dudes
+  <div class="bg-white">
+    Documents
   </div>
 </template>
+
