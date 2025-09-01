@@ -7,7 +7,7 @@
 <template>
   <SidebarProvider :defaultOpen="true">
     <AppSidebar />
-    <main>
+    <main class="w-screen">
       <RouterView />
     </main>
   </SidebarProvider>
