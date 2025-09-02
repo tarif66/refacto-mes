@@ -6,6 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 </script>
 
@@ -14,10 +15,9 @@ import {
 
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger>Logo</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <NavigationMenuLink>Link</NavigationMenuLink>
-        </NavigationMenuContent>
+        <NavigationMenuLink href="/" :class="navigationMenuTriggerStyle()">
+            logo MES
+        </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
   
