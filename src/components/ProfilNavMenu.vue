@@ -1,83 +1,52 @@
 <script setup lang="ts">
-import {
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-} from "@/components/ui/dropdown-menu"
+  import {
+    DropdownMenuContent,
+    DropdownMenuSeparator,
+  } from "@/components/ui/dropdown-menu"
+  import Button from "./ui/button/Button.vue";
+import { CircleUser, ChevronRight, Plus, Settings, CircleQuestionMark, Users } from "lucide-vue-next";
 </script>
 
 <template>
-   <DropdownMenuContent class="w-56">
-      <DropdownMenuLabel>My Account</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuGroup>
-        <DropdownMenuItem>
-          <span>Profile</span>
-          <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <span>Billing</span>
-          <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <span>Settings</span>
-          <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <span>Keyboard shortcuts</span>
-          <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-        </DropdownMenuItem>
-      </DropdownMenuGroup>
-      <DropdownMenuSeparator />
-      <DropdownMenuGroup>
-        <DropdownMenuItem>
-          <span>Team</span>
-        </DropdownMenuItem>
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <span>Invite users</span>
-          </DropdownMenuSubTrigger>
-          <DropdownMenuPortal>
-            <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <span>Email</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <span>Message</span>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <span>More...</span>
-              </DropdownMenuItem>
-            </DropdownMenuSubContent>
-          </DropdownMenuPortal>
-        </DropdownMenuSub>
-        <DropdownMenuItem>
-          <span>New Team</span>
-          <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-        </DropdownMenuItem>
-      </DropdownMenuGroup>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-        <span>GitHub</span>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <span>Support</span>
-      </DropdownMenuItem>
-      <DropdownMenuItem disabled>
-        <span>API</span>
-      </DropdownMenuItem>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-        <span>Log out</span>
-        <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-      </DropdownMenuItem>
+   <DropdownMenuContent class="w-70 mx-8">
+
+    <div class="flex flex-col justify-center center-align p-4 gap-2">
+      <Users class="w-8 h-8 mx-auto my-2"/>
+      <p class="text-center">Olivier Bréchon-Cornery</p>
+      <Button variant="link">Identité Nationale de Santé</Button>
+      <Button variant="outline">Gérer le profil</Button>
+    </div>
+
+    <DropdownMenuSeparator />
+
+    <div class="flex flex-col justify-center center-align p-4 gap-2">
+      <p>Sélectionner un profil :</p>
+      <Button variant="ghost" class="justify-start">
+        <CircleUser class="w-4 h-4 mr-2" />
+        Alec Bréchon-Cornery
+        <ChevronRight class="w-4 h-4 mr-2" />
+      </Button>
+      <Button variant="ghost" class="justify-start">
+        <Plus class="w-4 h-4 mr-2" />
+        Ajouter un profil
+      </Button>
+    </div>
+
+    <DropdownMenuSeparator />
+
+    <div class="flex flex-col justify-center center-align p-4 gap-2">
+      <Button variant="ghost" class="justify-start">
+        <CircleQuestionMark class="w-4 h-4 mr-2" />
+        Aide
+      </Button>
+      <Button variant="ghost" class="justify-start">
+        <Settings class="w-4 h-4 mr-2" />
+        Paramètres de compte
+      </Button>      
+      <Button class="w-fit mx-auto">
+        Se déconnecter
+      </Button>
+    </div>
+
     </DropdownMenuContent>
 </template>
