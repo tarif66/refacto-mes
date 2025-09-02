@@ -2,11 +2,11 @@
   import { RouterView } from 'vue-router'
   import AppSidebar from './components/AppSidebar.vue';
   import SidebarProvider from './components/ui/sidebar/SidebarProvider.vue';
-  import AppNavMenu from './components/AppNavMenu.vue';
+  import AppNavMenu2 from './components/AppNavMenu.vue';
 </script>
 
 <template>
-  <AppNavMenu class="w-full bg-yellow-500"/>
+  <AppNavMenu2/>
   <SidebarProvider :defaultOpen="true">
     <AppSidebar class="top-14"  />
     <main class="w-screen">

@@ -1,40 +1,27 @@
 <script setup lang="ts">
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
+    import Button from './ui/button/Button.vue';
+    import ProfilNavMenu from '@/components/ProfilNavMenu.vue';
+    import { DropdownMenu, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 </script>
 
 <template>
-  <NavigationMenu class="bg-red-500 w-auto h-14">
-
-    <NavigationMenuList>
-      <NavigationMenuItem>
-        <NavigationMenuLink href="/" :class="navigationMenuTriggerStyle()">
-            logo MES
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  
-    <NavigationMenuList>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger>Notifications</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <NavigationMenuLink>Link</NavigationMenuLink>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    <NavigationMenuItem>
-        <NavigationMenuTrigger>Olivier B.</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <NavigationMenuLink>Link</NavigationMenuLink>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-
-  </NavigationMenu>
+  <div class="flex flex-row justify-between w-full bg-yellow-500 h-14">
+    <div>
+        <Button>
+            <a href="/">
+            MES logo
+            </a>
+        </Button>
+    </div>
+    <div>
+      <DropdownMenu>
+        <DropdownMenuTrigger as-child>
+          <Button variant="outline">
+            Olivier B.
+          </Button>
+        </DropdownMenuTrigger>
+        <ProfilNavMenu/>
+      </DropdownMenu>
+    </div>
+  </div>
 </template>
